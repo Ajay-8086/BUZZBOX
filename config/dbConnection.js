@@ -3,8 +3,8 @@ const mongoose = require('mongoose')
 
 const connectDB = async()=>{
     try {
-        const con =await mongoose.connect( process.env.URI)
-        console.log('databassse connected success fully');
+        await mongoose.connect( process.env.URI)
+        console.log('database connected success fully');
     } catch (error) {
         console.log('Error connecting the DB');
     }
